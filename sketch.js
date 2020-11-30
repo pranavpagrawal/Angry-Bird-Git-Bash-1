@@ -15,7 +15,7 @@ function setup(){
     engine = Engine.create();
     world = engine.world;
 
-
+    // to create objects
     ground = new Ground(600,height,1200,20);
     platform = new Ground(150, 305, 300, 170);
 
@@ -39,11 +39,13 @@ function setup(){
 }
 
 function draw(){
+    //to add the background	
     background(backgroundImg);
     Engine.update(engine);
     console.log(box2.body.position.x);
     console.log(box2.body.position.y);
     console.log(box2.body.angle);
+    //to display the sprites
     box1.display();
     box2.display();
     ground.display();
